@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const searchBar = document.querySelector('.searchBar');
   const searchInput = document.getElementById('searchInput');
   const searchClose = document.getElementById('searchClose');
-
+// created new branch
   for (let i = 0; i < allButton.length; i++) {
     allButton[i].addEventListener('click', function() {
         searchBar.style.visibility = 'visible';
