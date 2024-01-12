@@ -9,13 +9,8 @@
     <script type="text/javascript" defer src="/js/script.js"></script>
 </head>
 <body>
-    <div class="container" id="themeChage">
-        <%- include('../partials/search.ejs') %>
-        <%- include('../partials/header.ejs') %>
-        <div class="container mode">
-            Dark mode:             
-            <span class="change">OFF</span>
-        </div>
+    <div class="container">
+        <%- include('../partials/header_admin.ejs') %>
         <%- body %>
         <%- include('../partials/footer.ejs') %>
     </div>

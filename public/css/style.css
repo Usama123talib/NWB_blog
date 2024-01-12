@@ -2,6 +2,7 @@
 
 :root {
   --black: #1c1c1c;
+  --black-full: black;
   --gray: #7E7E7E;
   --gray-light: #E4E4E4;
   --red: #b30000;
@@ -21,7 +22,7 @@ body {
   margin: 0;
 }
 
-a { color: var(--black); }
+a { color: var(--black-full); }
 h1 { font-size: var(--font-size-xl); }
 h2 { font-size: var(--font-size-lg); }
 h3 { font-size: var(--font-size-md); }
@@ -338,3 +339,21 @@ img {
 .pagination:hover {
   color: var(--black);
 }
+
+/* Dark Mode on / off */
+  .mode {
+      float:right;
+  }
+  .change {
+      cursor: pointer;
+      border: 1px solid #555;
+      border-radius: 40%;
+      width: 20px;
+      text-align: center;
+      padding: 5px;
+      margin-left: 8px;
+  }
+  .dark{
+      background-color: #222;
+      color: #e6e6e6 !important;
+  }
