@@ -1,4 +1,4 @@
-# My Project
+#NWB BLOG SITE
 
 This is a brief description of my project NWB blog.
 
