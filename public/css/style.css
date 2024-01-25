@@ -357,8 +357,3 @@ img {
       background-color: #222;
       color: #e6e6e6 !important;
   }
-/* ABOUT PAGE */
-  .container.allAbout {
-    display: flex;
-    justify-content: space-between;
-}
