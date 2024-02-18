@@ -362,3 +362,39 @@ img {
     display: flex;
     justify-content: space-between;
 }
+
+
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+ .pd20 {
+   padding: 20px;
+ }
+ #map {
+  height: 50%;
+  width: 100%;
+  /* display: block; 
+    visibility: visible; 
+    opacity: 1; 
+    z-index: auto; */
+    /* position: absolute !important; */
+    overflow: visible !important;
+  /* margin: auto !important; */
+}
+.container #map {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; 
+  padding: 20px; /* Add padding to the container */
+  /* Add any other styles you want for your container */
+}
+#body {
+  width: 50vw;
+  height: 100vh;
+  
+}
+
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
