@@ -42,6 +42,10 @@ app.set('view engine','ejs');
 
 app.use('/', require('./server/routes/main.js'));
 app.use('/', require('./server/routes/admin.js'));
+// app.use('/', require('./server/routes/contact.js'));
+app.use('/', require('./server/routes/contact.js'));
+
+
 
 
 const url = 'http://localhost:5000/'
