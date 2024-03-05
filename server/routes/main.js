@@ -41,6 +41,41 @@ router.get('', async (req, res) => {
     }
 
 });
+/**
+ * GET /
+ *  Home
+ */
+
+router.get('/api', async (req, res) => {
+    try {
+        const locals = {
+         title: 'NWB Blogs',
+         discription: 'Web Developer and content writer.'
+        };
+        let perPage = 10;
+        let page = req.query.page || 1;
+
+        const data = await Post.aggregate([{$sort: {createdAt: -1}}])
+        .skip(perPage * page - perPage)
+        .limit(perPage)
+        .exec();
+
+        const count = await Post.countDocuments();
+        const nextPage = parseInt(page) + 1;
+        const hasNextPage = nextPage <= Math.ceil(count / perPage);
+
+        // console.log(data);
+        res.json({
+            locals,
+            data,
+            current: page,
+            nextPage: hasNextPage ? nextPage : null
+        });
+    } catch (error) {
+        console.log(error);
+    }
+
+});
 
 
 // router.get('', async (req, res) => {
@@ -81,6 +116,31 @@ router.get('/post/:id', async (req, res) => {
     }
 
 });
+
+/**
+ * GET /
+ *  Get slug id detail for react
+ */
+router.get('/post/:id', async (req, res) => { 
+    try {
+
+        const slug = req.params.id;
+
+        const data = await Post.findById({_id: slug});
+
+        const locals = {
+            title: data.title,
+            discription: 'Simple NWB News Blog site'
+           };
+        // console.log(data);
+        
+        res.json({locals, data});
+    } catch (error) {
+        console.log(error);
+    }
+
+});
+
 
 
 /**
